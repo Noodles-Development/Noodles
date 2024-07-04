@@ -9,9 +9,12 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
+# TODO: Add subdir
 add_executable(
         ${PROJECT_NAME}
         main.cpp
+
+        inteface/src/nodes/node.cpp
 )
 
 target_link_libraries(
