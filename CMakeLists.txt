@@ -3,7 +3,9 @@ project(Noodles VERSION 0.0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 
-find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
+set(NO_SYNC_QT ON)
+
+find_package(Qt6 REQUIRED COMPONENTS Core Gui WidgetsQuick)
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
@@ -22,4 +24,5 @@ target_link_libraries(
         Qt6::Core
         Qt6::Gui
         Qt6::Widgets
+        Qt6::Quick
 )
